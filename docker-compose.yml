@@ -1,0 +1,14 @@
+version: '2'
+services:
+
+ synergy:
+  image: synergy:0.0.1
+  hostname: synergy
+  environment:
+    - DISPLAY=$DISPLAY
+    - QT_X11_NO_MITSHM=1 
+  volumes:
+     - './Synergy.conf:/home/developer/.config/Synergy/Synergy.conf'
+     - '/tmp/.X11-unix:/tmp/.X11-unix'
+  ports:
+     - "2480:2480"
