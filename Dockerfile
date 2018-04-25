@@ -1,10 +1,8 @@
 FROM i386/ubuntu:16.04
 MAINTAINER OEMS "https://github.com/oemunoz"
 
-# install and configure for local debian proxy (if present)
-RUN apt-get update && apt-get install -y squid-deb-proxy-client
-
-RUN echo 'Acquire::http::Proxy "http://172.23.33.33:8000/";' | tee /etc/apt/apt.conf.d/30autoproxy  
+# Saving network squid-deb-proxy
+#RUN echo 'Acquire::http::Proxy "http://172.17.0.1:8000/";' >> /etc/apt/apt.conf 
 
 RUN apt-get update && \
 	apt-get install -y synergy sudo
