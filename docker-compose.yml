@@ -2,7 +2,7 @@ version: '2'
 services:
 
  synergy:
-  image: synergy:0.0.1
+  image: oems/docker-synergy
   hostname: synergy
   environment:
     - DISPLAY=$DISPLAY

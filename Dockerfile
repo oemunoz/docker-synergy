@@ -1,4 +1,4 @@
-FROM i386/ubuntu:16.04
+FROM ubuntu:16.04
 MAINTAINER OEMS "https://github.com/oemunoz"
 
 # Saving network squid-deb-proxy
